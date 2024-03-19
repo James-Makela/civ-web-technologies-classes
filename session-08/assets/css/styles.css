@@ -1,1 +1,18 @@
+aside img {
+    max-width: 100%;
+    height: auto;
+}
 
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 0.5rem
+}
+
+th {
+    background-color: lightgray;
+}
