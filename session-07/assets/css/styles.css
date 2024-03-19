@@ -1,0 +1,96 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../../assets/webfonts/Roboto/Roboto-Regular.ttf');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    word-wrap: anywhere;
+    margin: auto;
+    font-family: Roboto, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Gentium Book Plus", sans-serif;
+}
+
+header li:first-child > a{
+    color: red;
+}
+
+.sidebar > h3::before {
+    content: "📅 ";
+}
+
+button:hover {
+    background-color: green;
+    color: yellow;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.news-article:nth-child(2) a {
+    color: orangered;
+}
+
+.news-article:nth-child(3) a {
+    color: darkgreen;
+}
+
+header {
+    background-color: white;
+    padding: 1rem;
+}
+
+footer {
+    background-color: white;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        align-content: center;
+        margin: auto;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 800px;
+    }
+
+    .news-article {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: lightgray;
+    }
+
+    .container {
+        background-color: white;
+        padding: 1rem;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        min-width: 1100px;
+        max-width: 1200px;
+    }
+
+    .news-article {
+        margin: 1rem;
+    }
+}
