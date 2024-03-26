@@ -1,1 +1,18 @@
 /* Add any custom hidden class here */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    justify-items: left;
+    max-width: 50vh;
+}
+
+.submit-success {
+    visibility: hidden;
+    color: #3B3;
+}
+
+.horizontal-container {
+    display: flexbox;
+    flex-direction: row;
+}

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Advanced Selectors Activity</title>
   <link rel="stylesheet" href="assets/css/styles.css"> 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-gray-100">
     <header>
         <h1>News</h1>
@@ -33,6 +35,9 @@
             <li><a href="#" class="text-blue-500 hover:underline">Networking Mixer</a></li>
           </ul>
         </aside>
+        <div class="submit-success">
+          <p>Your Form has been submitted</p>
+        </div>
     </div>
     <footer class="bg-gray-300 py-4 text-center">
         <p class="text-gray-600">&copy; 2023 Your Company. All rights reserved.</p>
@@ -43,8 +48,32 @@
     <h3 class="text-2xl font-semibold mb-4 text-center">Contact Us</h3>
     <form id="contactForm" class="px-4 py-2" action="#" method="post" data-post-url="https://dev.screencraft.net.au/~staff-ag/show-me/index.php?">
       <!-- Add your form elements herer , use Tailwind classes if you like   -->
-
-    
+      <label class="w-full px-3 py-2" for="name">Name:</label>
+      <input class="w-full px-3 py-2 border rounded-lg" type="text" id="name" name="name" required>
+      <div id="nameError" class="text-red-500 hidden">Please enter your name</div>
+      <label class="px-3 py-4" for="email">Email:</label>
+      <input class="w-full px-3 py-2 border rounded-lg" type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Please enter your email" required>
+      <Label class="px-3 py-4" for="message">Message:</Label>
+      <textarea class="w-full px-3 py-2 border rounded-lg" name="message" id="message" cols="30" rows="10" required></textarea>
+      <label class="px-3 py-4" for="subject">Subject:</label>
+      <select class="w-full px-3 py-2 border rounded-lg" name="subject" id="subject">
+        <optgroup class="px-3 py-4" label="Help">
+          <option value="technical-help">Technical help</option>
+          <option value="sales-help">Sales help</option>
+        </optgroup>
+        <optgroup label="Support">
+          <option value="technical-support">Technical support</option>
+          <option value="Sales-support">Sales support</option>
+        </optgroup>
+      </select>
+      <div class="horizontal-container px-3 py-2">
+        <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+        <label for="subscribe">Subscribe</label>
+      </div>
+      <div class="horizontal-container">
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" type="submit">Submit</button>
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" type="reset">Reset</button>
+      </div>
     </form>
     <div class="confirmation-message hidden bg-green-500 text-white px-4 py-2 rounded-lg text-center" id="confirmationMessage">Thank you for your message!</div>
   </div>
