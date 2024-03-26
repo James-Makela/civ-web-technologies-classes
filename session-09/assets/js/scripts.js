@@ -31,7 +31,7 @@ let largest = Math.max(...numbers);
 let factorial = 1;
 for (let index = 1; index <= largest; index++) 
 {
-    factorial = index * factorial
+    factorial = index * factorial;
 }
 
 // Display results of all functions
@@ -40,4 +40,4 @@ console.log(`Sum of Numbers: ${sum}`);
 console.log(`Average of numbers: ${average}`);
 console.log(`Square root of average: ${sqRoot}`);
 console.log(`Largest: ${largest}`);
-console.log(`Factorial: ${factorial}`)
+console.log(`Factorial: ${factorial}`);
